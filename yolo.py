@@ -67,8 +67,8 @@ def main(camera_index=0, conf_thres=0.3, imgsz=640):
                 # Filter only person or cell phone (COCO names: 'person', 'cell phone')
                 if class_name.lower() in ("person", "cell phone", "cellphone", "mobile phone", "cell_phone"):
                     # center point
-                    cx = (x1 + x2) / 2.0
-                    cy = (y1 + y2) / 2.0
+                    cx = (x1 + x2) / 2
+                    cy = (y1 + y2) / 2
 
                     # Decide left or right half
                     if cx < mid_x:
