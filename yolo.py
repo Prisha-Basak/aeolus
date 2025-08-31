@@ -11,7 +11,6 @@ from ultralytics import YOLO
 import time
 
 # Choose which pretrained weights to use:
-# yolov8n.pt -> smallest / fastest; change to 'yolov8s.pt' or others if you want more accuracy.
 MODEL_WEIGHTS = "yolov8n.pt"
 
 def main(camera_index=0, conf_thres=0.3, imgsz=640):
@@ -39,7 +38,7 @@ def main(camera_index=0, conf_thres=0.3, imgsz=640):
         # imgsz favors speed/accuracy tradeoff.
         results = model(frame, conf=conf_thres, imgsz=imgsz)
 
-        # results is an iterable of results (one per supplied image). We gave one image.
+        # results is an iterable of results (one per supplied image)
         if len(results) > 0:
             r = results[0]
 
