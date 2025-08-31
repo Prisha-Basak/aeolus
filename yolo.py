@@ -1,5 +1,5 @@
 """
-Real-time YOLO (ultralytics) webcam demo:
+Real-time YOLO webcam demo:
 - Detects 'person' and 'cell phone'
 - Computes bounding box center
 - Determines if center is in LEFT or RIGHT half of the frame
@@ -31,7 +31,7 @@ def main(camera_index=0, conf_thres=0.3, imgsz=640):
             break
 
         frame_height, frame_width = frame.shape[:2]
-        mid_x = frame_width / 2.0
+        mid_x = frame_width / 2
 
         # Run YOLO prediction on the single frame.
         # conf=conf_thres sets the confidence threshold.
