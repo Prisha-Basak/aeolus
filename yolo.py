@@ -4,7 +4,6 @@ Real-time YOLO (ultralytics) webcam demo:
 - Computes bounding box center
 - Determines if center is in LEFT or RIGHT half of the frame
 - Prints results to console and overlays info on the feed
-Press 'q' to quit.
 """
 
 import cv2
